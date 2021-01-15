@@ -7,38 +7,47 @@
 // tutaj klasy PopGwiazda, RapGwiazda oraz funkcja stworzArtyste
 
 class PopGwiazda : public Artysta
-{
-  PopGwiazda(const std:: string& s, unsigned n) :pseudonim(s), liczba_sluchaczy(n){}
+{   
+public:
+    PopGwiazda(const std::string& s, unsigned n) 
+    {
+        setPseudonim(s);
+        setLS(n);
+    }
 
-  void graj(std:: ostream& a) const
-  {
-    a <<"PopGwiazda: " << pseudonim;
-  }
+    void graj(std::ostream& a) const
+    {
+        a << "PopGwiazda: " << getPseudonim();
+    }
 
-  ~PopGwiazda(){}
+    ~PopGwiazda() {}
 };
 
 class RapGwiazda : public Artysta
-{
-  RapGwiazda(const std:: string& s, unsigned n) :pseudonim(s), liczba_sluchaczy(n){}
+{   
+public:
+    RapGwiazda(const std::string& s, unsigned n) 
+    {
+        setPseudonim(s);
+        setLS(n);
+    }
 
-    void graj(std:: ostream& a) const
-  {
-    a <<"RapGwiazda: " << pseudonim;
-  }
+    void graj(std::ostream& a) const
+    {
+        a << "RapGwiazda: " << getPseudonim();
+    }
 
-  ~RapGwiazda(){}
+    ~RapGwiazda() {}
 };
 
 Artysta* stworzArtyste(const std::string& s)
 {
-  if(front(s)==std::toupper(front(s)))
-  {
-    return new PopGwiazda("BTS",1234);
-  }
-  else
-  {
-    return new RapGwiazda("Ye",4321);
-  }
+    if (s.front() == std::toupper(s.front()))
+    {   
+        return new PopGwiazda("BTS", 1234);
+    }
+    else
+    {
+        return new RapGwiazda("Ye", 4321);
+    }
 };
-

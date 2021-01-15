@@ -31,5 +31,15 @@ unsigned getSluchacze() const
   return liczba_sluchaczy;
 }
 
+    void setPseudonim(std::string s)
+    {
+        pseudonim = s;
+    }
+
+    void setLS(unsigned L)
+    {
+        liczba_sluchaczy = L;
+    }
+
 virtual ~Artysta(){}
 };
