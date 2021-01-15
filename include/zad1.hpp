@@ -18,7 +18,7 @@ class Artysta
 
   void graj(std:: ostream& a) const
   {
-    a = std::to_string(pseudonim) + ": " std::to_string(liczba_sluchaczy);
+a << pseudonim << ": " << liczba_sluchaczy;
   }
 
 const std::string& getPseudonim() const
@@ -30,4 +30,4 @@ unsigned getSluchacze() const
 {
   return liczba_sluchaczy;
 }
-}
+};
