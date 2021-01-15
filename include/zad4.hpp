@@ -3,4 +3,20 @@
 #include <exception>
 #include <vector>
 
-// tutaj funkcja stworzZespol
+std::vector<Artysta> stworz_zespol(int n, const std::string& s)
+{
+    if (s.size() != n)
+    {
+        throw logic_error("error");
+    }
+    else
+    {   
+        vector<Artysta> v;
+        for (int i = 0; i < n; i++)
+        {
+            v.push_back(Artysta(s, i + 1));
+        };
+
+        return v;
+    };
+}
