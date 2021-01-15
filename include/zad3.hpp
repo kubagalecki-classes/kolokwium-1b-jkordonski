@@ -13,7 +13,7 @@ public:
 
     unsigned koncert()
     {
-        return i.liczbaUczestnikow(a->getSluchacze());
+        return i.liczbaUczestnikow(a.getSluchacze());
     }
 
 };
