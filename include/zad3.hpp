@@ -2,4 +2,19 @@
 
 #include "zad1.hpp"
 
-//tutaj szablon ArtystaPlusInstrument
+template<typename T>
+class ArtystaPlusInstrument
+{
+private:
+    Artysta a;
+    T i;
+public:
+    ArtystaPlusInstrument(const Artysta& art, const T& in) : a(art), i(in) {}
+
+    unsigned koncert()
+    {
+        return i.liczbaUczestnikow(a.getSluchacze());
+    }
+
+};
+
