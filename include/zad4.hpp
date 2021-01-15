@@ -11,12 +11,12 @@ std::vector<Artysta> stworz_zespol(int n, const std::string& s)
     }
     else
     {   
-        vector<Artysta> v;
+        vector<Artysta> v1;
         for (int i = 0; i < n; i++)
         {
             v.push_back(Artysta(s, i + 1));
         };
 
-        return v;
+        return v1;
     };
 }
