@@ -16,9 +16,9 @@ class Artysta
   Artysta() :pseudonim("Anonim"), liczba_sluchaczy(0){}
   Artysta(const std:: string& s, unsigned n) :pseudonim(s), liczba_sluchaczy(n){}
 
-  void graj(std:: ostream& a) const
+  virtual void graj(std:: ostream& a) const
   {
-a << pseudonim << ": " << liczba_sluchaczy;
+    a << pseudonim << ": " << liczba_sluchaczy;
   }
 
 const std::string& getPseudonim() const
@@ -30,4 +30,6 @@ unsigned getSluchacze() const
 {
   return liczba_sluchaczy;
 }
+
+virtual ~Artysta(){}
 };
